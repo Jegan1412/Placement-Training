@@ -10,7 +10,7 @@ public class Relational_Logical_Ops
 	    b =  input.nextInt();
 	    c =  input.nextInt();
 	    
-	    
+	    System.out.println("\nShort Circiut Ops:\n");
 	    //Short Circuit Operators
 	    if(a>b && a>c){
 	        System.out.println(a+" is Greater");
@@ -19,7 +19,8 @@ public class Relational_Logical_Ops
 	    }else{
 	        System.out.println(c+" is Greater");
 	    } 
-	    
+
+	    System.out.println("\nNon-Short Circiut Ops:\n");
 	    //Non-Short Circuit Operators
 	    if(a>b & a>c){
 	        System.out.println(a+" is Greater");
