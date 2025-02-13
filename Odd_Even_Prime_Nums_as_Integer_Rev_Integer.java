@@ -8,7 +8,7 @@ public class Odd_Even_Prime_Nums_as_Integer_Rev_Integer
 	    
 	    int a=input.nextInt();
 	    
-	    //Even Sum & Odd_sum & Prime_sum
+	    //Even_Num & Odd_Num & Prime_Num
 	    int temp=a,e_sum=0,o_sum=0,p_sum=0;
 	    while(temp>0){
 	        int digit = temp%10;
@@ -23,6 +23,7 @@ public class Odd_Even_Prime_Nums_as_Integer_Rev_Integer
 	    }
 	    System.out.println("\nEven Nums: "+e_sum+"\nOdd Nums: "+o_sum+"\nPrime Nums: "+p_sum);
 
+        //Even_Num & Odd_Num & Prime_Num and Its Reverses
 	    int r_e_sum=Rev_num(e_sum),r_o_sum=Rev_num(o_sum),r_p_sum=Rev_num(p_sum);
 	    System.out.println("\nEven Nums: "+r_e_sum+"\nOdd Nums: "+r_o_sum+"\nPrime Nums: "+r_p_sum);
 	    
