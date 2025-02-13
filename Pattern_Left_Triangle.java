@@ -34,5 +34,15 @@ public class Pattern_Left_Triangle
 	        }
 	        System.out.println("");
 	    }
+
+	    System.out.println("");
+	    val=1;
+	    for(int i=0;i<n;i++){
+	        for(int j=0;j<=i;j++){
+	            System.out.print(val+" ");
+	            val++;
+	        }
+	        System.out.println("");
+	    }
 	}
 }
