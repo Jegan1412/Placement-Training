@@ -14,13 +14,9 @@ public class Find_Max_Count_Of_Continous_Elements_In_Array_0_1
 	    
 	    int count=0,prev=0;
 	    for(int i=0;i<n;i++){
-	        if(arr[i]==1){
-	            count++;
-	        }
-	        else if(arr[i]==0){
-	            prev=Math.max(count,prev);
-	            count=0;
-	        }
+	        if(arr[i]==1)   count++;
+	        else if(arr[i]==0)   count=0;
+	        prev = Math.max(count,prev);
 	    }
 	    System.out.print(prev);
 		
