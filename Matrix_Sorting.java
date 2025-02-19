@@ -6,58 +6,16 @@ public class Matrix_Sorting
 		
 		Scanner input = new Scanner(System.in);
 		System.out.println("Enter Row & Cloumn Size of Matrix : ");
-		int r=input.nextInt(), c=input.nextInt(), arr[][] = new int[r][c];
-		int i,j,k,l,temp;
-		int d1[] = new int[r*c];
+		int r=input.nextInt(), c=input.nextInt(), arr[][] = new int[r][c], i,j;
 		
-		for(i=0;i<r;i++){
+		
+	    for(i=0;i<r;i++){
 		    for(j=0;j<c;j++){
 		        arr[i][j]=input.nextInt();
 		    }
 		}
 		
-		k=0;
-		for(i=0;i<r;i++){
-		    for(j=0;j<c;j++){
-		        d1[k] = arr[i][j];
-		        k++;
-		    }
-		}
-		
-		for(i=0;i<(r*c)-1;i++){
-		    for(j=0;j<(r*c)-i-1;j++){
-		        if(d1[j]>d1[j+1]){
-		            temp = d1[j];
-		            d1[j] = d1[j+1];
-		            d1[j+1] = temp;
-		        }
-		    }
-		}
-		
-		k=0;
-		for(i=0;i<r;i++){
-		    for(j=0;j<c;j++){
-		        arr[i][j] = d1[k++];
-		    }
-		}
-		
-		/*int curr;
-		for(i=0;i<r;i++){
-		    for(j=0;j<c;j++){
-		        curr = arr[i][j];
-		        for(k=0;k<r;k++){
-		            for(l=0;l<c;l++){
-		                if(arr[k][l]==curr) continue;
-		                if(arr[i][j] > arr[k][l]){
-		                    temp = arr[i][j];
-		                    arr[i][j] = arr[k][l];
-		                    arr[k][l] = temp;
-		                }
-		            }
-		        }
-		            
-		    }
-	    }*/
+		sort_matrix_one_dimension_method(arr, r, c);
 		
 		display(arr,r,c);
 	}
@@ -72,6 +30,37 @@ public class Matrix_Sorting
 		    }
 		    System.out.print(" |");
 		}
+	}
+	
+	static int[][] sort_matrix_one_dimension_method(int arr[][], int r, int c){
+	    
+	    int one_dimension[] = new int[r*c], i,j,k,temp;
+		
+		k=0;
+		for(i=0;i<r;i++){
+		    for(j=0;j<c;j++){
+		        one_dimension[k] = arr[i][j];
+		        k++;
+		    }
+		}
+		
+		for(i=0;i<(r*c)-1;i++){
+		    for(j=0;j<(r*c)-i-1;j++){
+		        if(one_dimension[j]>one_dimension[j+1]){
+		            temp = one_dimension[j];
+		            one_dimension[j] = one_dimension[j+1];
+		            one_dimension[j+1] = temp;
+		        }
+		    }
+		}
+		
+		k=0;
+		for(i=0;i<r;i++){
+		    for(j=0;j<c;j++){
+		        arr[i][j] = one_dimension[k++];
+		    }
+		}
+		return arr;
 	}
 	
 }
