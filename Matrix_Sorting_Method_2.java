@@ -7,7 +7,7 @@ public class Matrix_Sorting_Method_2
 		Scanner input = new Scanner(System.in);
 		System.out.println("Enter Row & Cloumn Size of Matrix : ");
 		int r=input.nextInt(), c=input.nextInt(), arr[][] = new int[r][c];
-		int i,j,k,l,temp, curr;
+		int i,j;
 		
 		for(i=0;i<r;i++){
 		    for(j=0;j<c;j++){
@@ -15,21 +15,7 @@ public class Matrix_Sorting_Method_2
 		    }
 		}
 		
-		for(i=0;i<r;i++){
-		    for(j=0;j<c;j++){
-		        curr = arr[i][j];
-		        for(k=0;k<r;k++){
-		            for(l=0;l<c;l++){
-		                if(arr[k][l]==curr) continue;
-		                if(curr < arr[k][l]){
-		                    temp = arr[i][j];
-		                    arr[i][j] = arr[k][l];
-		                    arr[k][l] = temp;
-		                }
-		            }
-		        } 
-		    }
-	    }
+		sort_matrix_swapping_method(arr, r, c);
 		
 		display(arr,r,c);
 	}
@@ -44,6 +30,28 @@ public class Matrix_Sorting_Method_2
 		    }
 		    System.out.print(" |");
 		}
+	}
+	
+	static int[][] sort_matrix_swapping_method(int arr[][], int r, int c){
+	    
+	    int i,j,k,l, temp, curr;
+	    
+	    for(i=0;i<r;i++){
+		    for(j=0;j<c;j++){
+		        curr = arr[i][j];
+		        for(k=0;k<r;k++){
+		            for(l=0;l<c;l++){
+		                if(arr[k][l]==curr) continue;
+		                if(curr < arr[k][l]){
+		                    temp = arr[i][j];
+		                    arr[i][j] = arr[k][l];
+		                    arr[k][l] = temp;
+		                }
+		            }
+		        } 
+		    }
+	    }
+	    return arr;
 	}
 	
 }
