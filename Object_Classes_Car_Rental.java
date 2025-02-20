@@ -25,8 +25,8 @@ class CarRental{
     float carRent=0;
     
     ArrayList<Integer> car_Id = new ArrayList<>();
-	ArrayList<String> car_Type = new ArrayList<>();
-	ArrayList<Float> car_Rent = new ArrayList<>();
+    ArrayList<String> car_Type = new ArrayList<>();
+    ArrayList<Float> car_Rent = new ArrayList<>();
     
     void getCar(){
         Scanner input = new Scanner(System.in);
@@ -40,7 +40,6 @@ class CarRental{
     }
     
     float getRent(String carType){
-        
         switch(carType){
             case "SmallCar":
             case "smallcar":
@@ -62,7 +61,5 @@ class CarRental{
     
     void showCar(int index){
         System.out.println("Car ID: "+car_Id.get(index)+"\nCar Type: "+car_Type.get(index)+"\nCar Rent: "+car_Rent.get(index));
-    }
-    
-    
+    }  
 }
