@@ -4,16 +4,14 @@ public class Object_Classes_Object_Count_Incrementor
 {
 	public static void main(String[] args) {
 		
-	    Obj car = new Car(), rocket = new Car();
+	    Obj car = new Obj(), rocket = new Obj();
 	}
 }
 
 class Obj{
-    String brand;
     static int count=0;
-    Car(){
+    Obj(){
         count++;
         System.out.println("Object Created! Current Count: "+count);
     }
-    
 }
