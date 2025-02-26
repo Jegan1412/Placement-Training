@@ -1,7 +1,3 @@
-package placementtest;
-
-import java.util.*;
-
 public class PatternTest2 {
     static int prime=2;
     public static void main(String[] args){

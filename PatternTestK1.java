@@ -1,4 +1,3 @@
-package placementtest;
 import java.util.*;
 
 public class PatternTestK1 {

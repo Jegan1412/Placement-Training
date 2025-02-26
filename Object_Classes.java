@@ -8,15 +8,15 @@ public class Object_Classes
 	    Scanner input = new Scanner(System.in);
 	    ArrayList<String> details_name = new ArrayList<>();
 	    ArrayList<Long> details_reg_no = new ArrayList<>();
-	    int n = input.nextInt();
+	    int no = input.nextInt();
 	    int i;
-	    for(i=0;i<n;i++){
+	    for(i=0;i<no;i++){
 	        n.info();
 	        details_name.add(n.name);
 	        details_reg_no.add(n.reg_no);
 	    }
 	    
-	    for(i=0;i<n;i++){
+	    for(i=0;i<no;i++){
 	        System.out.print(details_name.get(i)+" "+details_reg_no.get(i)+"\n");
 	    }
 	}

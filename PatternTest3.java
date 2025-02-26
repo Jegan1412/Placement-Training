@@ -1,7 +1,3 @@
-package placementtest;
-
-import java.util.*;
-
 public class PatternTest3 {
     static int f1=0,f2=1,count=0;
     public static void main(String[] args){
