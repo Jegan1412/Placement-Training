@@ -8,11 +8,11 @@ public class Generate_Automorphic_Nums
 	    
 	    System.out.println("Enter Range to Print Automorph From 1: ");
 	    int range = input.nextInt(), i,j;
-	    long n, n_s, temp, count;
+	    long n, n_s, temp, temp_s, count;
 	    for(i=1;i<=range;i++){
 	        
 	        n = (long)i; n_s = n*n;
-	        temp = n; count=0;
+	        temp = n; temp_s = n_s; count=0;
 	    
 	        while(temp>0){
 	            count++;
