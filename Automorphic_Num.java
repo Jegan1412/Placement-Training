@@ -7,7 +7,7 @@ public class Automorphic_Num
 	    Scanner input = new Scanner(System.in);
 	    
 	    int n = input.nextInt(), n_s = n*n;
-	    int temp = n, temp_s = n_s, count=0;
+	    int temp = n, count=0;
 	    
 	    while(temp>0){
 	        count++;
