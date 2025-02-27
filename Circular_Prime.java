@@ -29,7 +29,7 @@ class Functions{
     }
 }
 
-public class Prime_Rotations_Are_Prime_Or_Not{
+public class Circular_Prime{
     public static void main(String args[]){
         
         Scanner input = new Scanner(System.in);
