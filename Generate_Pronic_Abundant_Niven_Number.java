@@ -4,7 +4,7 @@ class Functions{
     
     public boolean pronic_num(int a){
         boolean pronic = false;
-        for(int i=1;i<a-1;i++){
+        for(int i=1;i<(a/2);i++){
             if(i*(i+1) == a){
                 pronic = true;
                 break;
